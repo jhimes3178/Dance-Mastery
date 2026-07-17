@@ -1,7 +1,7 @@
 // 1. INITIALIZE SUPABASE
-const SUPABASE_URL = "https://qwvbtlxcpdzdiikyuqjf.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8";
-const supabase = supabase.createClient(https://qwvbtlxcpdzdiikyuqjf.supabase.co, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8);
+//const SUPABASE_URL = "https://qwvbtlxcpdzdiikyuqjf.supabase.co";
+//const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8";
+//const supabase = supabase.createClient(https://qwvbtlxcpdzdiikyuqjf.supabase.co, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8);
 
 // 2. THE MAIN TECHNIQUE DATA ARRAY (Styles 1 - 4)
 const DANCE_STYLES_DATABASE = [
