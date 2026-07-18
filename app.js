@@ -133,7 +133,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. DISPLAY LOGIC & ROUTING ENGINES
+// 2. DISPLAY LOGIC & ENGINES (RUNS AUTOMATICALLY)
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -150,7 +150,8 @@ function renderDanceStyles() {
 }
 
 function showDifficultyMenu(style) {
-  const container = document.getElementById("dance-moves-container");container.innerHTML = <h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;" onclick="renderDanceStyles()">← Back to Styles</button>;
+  const container = document.getElementById("dance-moves-container");
+container.innerHTML = <h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;background:none;border:none;" onclick="renderDanceStyles()">← Back to Styles</button>;
 ["beginner", "intermediate", "difficult"].forEach(level => {
 const levelSection = document.createElement("div");
 levelSection.className = level-section ${level};
@@ -158,12 +159,7 @@ levelSection.innerHTML = <h4 style="text-transform: capitalize; color: #bb86fc; 
 style.moves[level].forEach(moveName => {
 const card = document.createElement("div");
 card.className = "move-card";
-if (window.isPaywalled && (level === "intermediate" || level === "difficult")) {
-card.className = "move-card paywalled";
-card.innerHTML = <strong style="font-size: 16px; color: #fff;">${moveName}</strong> <div class="blur-overlay" style="margin-top:10px;"> <button onclick="redirectToStripe()" style="background:#6200ee;color:white;border:none;padding:8px 12px;border-radius:4px;cursor:pointer;">🔒 Unlock Premium</button> </div>;
-} else {
 card.innerHTML = <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong> <div class="card-actions"> <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button> </div>;
-}
 levelSection.appendChild(card);
 });
 container.appendChild(levelSection);
@@ -173,22 +169,21 @@ function watchTutorial(styleName, moveName) {
 const searchQuery = encodeURIComponent(${styleName} ${moveName} dance technique tutorial);
 window.open(https://youtube.com{searchQuery}, '_blank');
 }
-function redirectToStripe() {
-window.location.href = "stripe.com";
-}
-window.onload = () => {
+// Trigger layout map immediately when the file loads on the screen
 renderDanceStyles();
-};
 // ==========================================
-// 3. ISOLATED BACKEND LAYER (Failsafe)
+// 3. ISOLATED BACKEND LAYER (SAFE ERROR WRAPPING)
 // ==========================================
+try {
 const SUPABASE_URL = "https://qwvbtlxcpdzdiikyuqjf.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8";
-
-try {
-  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-} catch (e) {
-  console.log("Database connectivity bypassed for stability testing.");
+if (supabase && typeof supabase.createClient === "function") {
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+console.log("Database connected smoothly.");
 }
+} catch (error) {
+console.log("Database connectivity bypassed for stability testing: ", error);
+}
+
 
 
