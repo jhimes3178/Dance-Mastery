@@ -1,4 +1,4 @@
-// ==========================================
+  // ==========================================
 // 1. THE LIGHTWEIGHT TECHNIQUE LIBRARY
 // ==========================================
 const DANCE_STYLES_DATABASE = [
@@ -133,7 +133,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. DISPLAY LOGIC & ENGINES (RUNS AUTOMATICALLY)
+// 2. DISPLAY LOGIC & ENGINES
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -169,21 +169,24 @@ function watchTutorial(styleName, moveName) {
 const searchQuery = encodeURIComponent(${styleName} ${moveName} dance technique tutorial);
 window.open(https://youtube.com{searchQuery}, '_blank');
 }
-// Trigger layout map immediately when the file loads on the screen
+// Trigger visual layout first immediately on load
+document.addEventListener("DOMContentLoaded", () => {
 renderDanceStyles();
+initializeDatabase();
+});
 // ==========================================
-// 3. ISOLATED BACKEND LAYER (SAFE ERROR WRAPPING)
+// 3. ISOLATED BACKEND LAYER (Failsafe Module)
 // ==========================================
-try {
+function initializeDatabase() {
 const SUPABASE_URL = "https://qwvbtlxcpdzdiikyuqjf.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8";
-if (supabase && typeof supabase.createClient === "function") {
+try {
+if (typeof supabase !== 'undefined' && supabase && typeof supabase.createClient === "function") {
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-console.log("Database connected smoothly.");
+console.log("Database linked successfully.");
 }
 } catch (error) {
-console.log("Database connectivity bypassed for stability testing: ", error);
+console.log("Database connection delayed safely: ", error);
 }
-
-
+}
 
