@@ -186,7 +186,7 @@ const SUPABASE_URL = "https://qwvbtlxcpdzdiikyuqjf.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8";
 try {
 if (SUPABASE_URL.indexOf("your-project-id") === -1) {
-const supabaseClient = supabase.createClient(https://qwvbtlxcpdzdiikyuqjf.supabase.co, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3dmJ0bHhjcGR6ZGlpa3l1cWpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyOTc0MTUsImV4cCI6MjA5OTg3MzQxNX0.PochcvTh-lA2xA6zJfzRmrtLpHk98c1x5-lAtnFtno8);
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
 } catch (e) {
 console.log("Database connectivity bypassed for stability testing.");
