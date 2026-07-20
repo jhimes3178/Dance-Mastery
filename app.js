@@ -129,8 +129,8 @@ function showDifficultyMenu(style) {
     style.moves[level].forEach(moveName => {
       const card = document.createElement("div");
       card.className = "move-card";
-      
-      const queryText = encodeURIComponent(style.name + " " + moveName + " dance technique tutorial");
+      const searchTerms = style.name + " " + moveName + " dance technique tutorial";
+      const queryText = encodeURIComponent(searchTerms);
       const nativeYoutubeUrl = "https://youtube.com" + queryText;
 
       card.innerHTML = `
