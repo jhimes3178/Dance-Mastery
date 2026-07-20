@@ -150,13 +150,12 @@ function showDifficultyMenu(style) {
 }
 
 function watchTutorial(styleName, moveName) {
-  const searchQuery = encodeURIComponent(`${styleName} ${moveName} dance technique tutorial`);
-  window.location.href = `https://youtube.com{searchQuery}`;
-}
-
-// SAFE EXECUTION LOOP
-try {
-  renderDanceStyles();
-} catch (e) {
-  console.log("Render failed visually: ", e);
+  const rawQuery = `${styleName} ${moveName} dance technique tutorial`;
+  const encodedQuery = encodeURIComponent(rawQuery);
+  
+  // Use a targeted mobile search reference path to execute a clean breakout
+  const targetUrl = "https://youtube.com" + encodedQuery;
+  
+  // Force phone web layers to snap entirely out of GitHub server restrictions
+  window.location.assign(targetUrl);
 }
