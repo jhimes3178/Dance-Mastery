@@ -6,7 +6,7 @@ const DANCE_STYLES_DATABASE = [
     name: "Hip-Hop",
     moves: {
       beginner: [
-        { name: "The Bounce", videoUrl: "https://youtube.com/shorts/Rd4eG4CTJ7E?is=9oar1B7d6TJOyd2A" },
+        { name: "The Bounce", videoUrl: "https://youtube.com/watch?v=E_zrWpFU5XE&is=02W8cG4s3MWFRZYs" },
         "The Two-Step", "The Reebok", "The Smurf", "The Prep", "The Cabbage Patch", "The Running Man", "The Steve Martin", "The Bart Simpson", "The Humpty Dance", "The Wop", "The Roger Rabbit"
       ],
       intermediate: ["The Moncell", "The Biz Markie", "Basic Arm Wave", "The Butterfly", "The Sham Rock", "The Tone Whop", "The Criss-Cross", "The Bankhead Bounce"],
