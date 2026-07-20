@@ -109,7 +109,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. RENDERING AUTOMATION
+// 2. DISPLAY LOGIC & RENDERING AUTOMATION
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -137,10 +137,14 @@ function showDifficultyMenu(style) {
     style.moves[level].forEach(moveName => {
       const card = document.createElement("div");
       card.className = "move-card";
+      
+      const queryText = encodeURIComponent(`${style.name} ${moveName} dance technique tutorial`);
+      const nativeYoutubeUrl = `https://youtube.com{queryText}`;
+
       card.innerHTML = `
         <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong>
         <div class="card-actions">
-          <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button>
+          <a href="${nativeYoutubeUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background:#333; color:white; border:1px solid #444; padding:8px 12px; border-radius:4px; text-decoration: none; font-size: 14px; text-align: center; cursor:pointer;">▶ Watch Tutorial</a>
         </div>
       `;
       levelSection.appendChild(card);
@@ -149,13 +153,5 @@ function showDifficultyMenu(style) {
   });
 }
 
-function watchTutorial(styleName, moveName) {
-  const rawQuery = `${styleName} ${moveName} dance technique tutorial`;
-  const encodedQuery = encodeURIComponent(rawQuery);
-  
-  // Use a targeted mobile search reference path to execute a clean breakout
-  const targetUrl = "https://youtube.com" + encodedQuery;
-  
-  // Force phone web layers to snap entirely out of GitHub server restrictions
-  window.location.assign(targetUrl);
-}
+// Automatically trigger layout map on page render
+renderDanceStyles();
