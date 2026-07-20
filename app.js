@@ -1,5 +1,5 @@
 // ==========================================
-// 1. COMPACT MASTER TECHNIQUE BLUEPRINT
+// 1. COMPACT MASTER TECHNIQUE BLUEPRINT (13 STYLES)
 // ==========================================
 const DANCE_STYLES_DATABASE = [
   {
@@ -35,22 +35,6 @@ const DANCE_STYLES_DATABASE = [
     }
   },
   {
-    name: "Lyrical",
-    moves: {
-      beginner: ["Fluid Promenade", "Arabesque Hold", "Chasse Forward", "Suspend Balance", "Roll-Down", "Step-Touch Ripple", "Soft Arm Sweep", "Extension Hold", "Parallel Passe", "Pivot Turn", "Weight Swivel", "Forward Reach", "Floor Descent", "Breath Push"],
-      intermediate: ["The Pencil Spin", "The Fan Kick Leap", "Pique Turn", "Developpe Hold", "Attitude Back", "Soft Chasse Jeté", "Spiral Roll Up", "Floating Balance"],
-      difficult: ["The Illusion Turn", "Switch Split Leap", "Double Pique Turn", "Over-Split Jump"]
-    }
-  },
-  {
-    name: "Tap Dance",
-    moves: {
-      beginner: ["Toe Tap", "Heel Drop", "Brush", "Scuff", "Shuffle", "Flap", "Slap", "Stamp", "Stomp", "Ball Change", "Dig", "Spank", "Chug", "Hop"],
-      intermediate: ["The Buffalo", "The Maxi Ford", "Iris Step", "Shuffle Ball Change", "Time Step", "Waltz Clog", "Cramp Roll", "Paradiddle"],
-      difficult: ["The Pull-Back", "The Wing", "Double Time Step", "High-Speed Cramp Riffs"]
-    }
-  },
-  {
     name: "Dancehall",
     moves: {
       beginner: ["The Wine", "Log On", "Sufferer", "Bogle", "Chaka Chaka", "Scooby Doo", "Signal the Plane", "Pon Di River", "Drive By", "Overproof", "Summer Bounce", "Zip It Up", "Tek Weh Yuhself", "Gully Creepa"],
@@ -59,19 +43,19 @@ const DANCE_STYLES_DATABASE = [
     }
   },
   {
-    name: "Ballroom",
+    name: "Tahitian Dance",
     moves: {
-      beginner: ["Cha-Cha Side Basic", "Salsa Basic", "Rumba Box Step", "Underarm Turn", "Cross Body Lead", "Side Step-Touch", "Cuddle Position", "New Yorker", "Spot Turn", "Basic Promenade", "Forward Walk", "Backward Walk", "Hip Swivel", "Double Hand Hold"],
-      intermediate: ["The Cross-Over Swivel", "The Hand-to-Hand Turn", "Continuous Alternating Turns", "Syncopated Side Chasses", "Open Break Drop", "Shadow Walk Position", "Inward Cradle Turn", "Cuban Hip Motion"],
-      difficult: ["The Advanced Dip", "High-Speed Pivot Lines", "Syncopated Rhythm Breaks", "Over-Balance Lean"]
+      beginner: ["Tamau", "Ami", "Varu Basic", "Fa'arapu Basic", "Tairi Tamau", "Hura Step", "Oveo Step", "Slide Step", "Hand Wave", "Ocean Motion Arms", "Flower Frame Pose", "Toe Tap Step", "Low Bounce Sway", "Continuous Tamau"],
+      intermediate: ["Fast Fa'arapu", "Varu Hip Twist Walk", "Fa'atere Traveling", "Turu Step", "Syncopated Ami Loops", "Double Tamau Drop", "Fa'arapu to Knees", "Hip Vibration Shimmies"],
+      difficult: ["High Speed Fa'arapu Drop and Rise", "Complex Otamu Combos", "Acrobatic Knee Spin Drops", "Advanced Poly-Rhythmic Drum Acceleration Runs"]
     }
   },
   {
-    name: "Street Jazz",
+    name: "West African",
     moves: {
-      beginner: ["Sharp Arm Clean", "Hip Pop Step", "Head Roll Isolation", "Chest Pump", "Shoulder Drop Walk", "Toe Touch Snap", "Floor Slide Drop", "Posing Freeze", "Cross Step Kick", "Low Bounce", "Double Step Slide", "Arm Whack", "Knee Pop", "Diagonal Punch"],
-      intermediate: ["The Whacking Arm Pattern", "The Chest-to-Hip Wave", "Floor Glide Turns", "Knee-Drop Transitions", "Syncopated Arm Drops", "Head Whips", "Bounce-Step-Turns", "High Hair Whip"],
-      difficult: ["The Floor Knee Spin", "Staccato Syncopations", "Double Pirouette to Lock", "Flying Switch Jumps"]
+      beginner: ["Soli Step", "Kuku Groove", "Sorsornet Slide", "Lamba Step", "Yankadi Walk", "Dundunba Kick", "Mandiani Shrug", "Kakilambe Bounce", "Aconcon Reach", "Sinte Step", "Balanta Hop", "Djole Jump", "Liberté Hand Sweep", "Saide Bounce"],
+      intermediate: ["Fast Soli Footwork", "Kuku Chest Vibration", "Lamba High Extension", "Dundunba Body Drop", "Yankadi-Macrou Transitions", "Syncopated Dundun Rolls", "Sorsornet Turn", "Mandiani Acceleration Line"],
+      difficult: ["Advanced Dundunba Jump Freeze", "High Velocity Mandiani Rotation", "Complex Poly-Rhythmic Footwork Slams", "Flying Acrobat Floor Slides"]
     }
   },
   {
@@ -91,11 +75,11 @@ const DANCE_STYLES_DATABASE = [
     }
   },
   {
-    name: "Brazilian Samba",
+    name: "Latin Fusion",
     moves: {
-      beginner: ["Samba no Pé", "Hip Swivel", "Side Step-Touch", "Forward March", "Hand Wave", "Basic Turn", "Foot Tap Front", "Foot Tap Back", "Shoulder Shake", "Arm Extended Slide", "Samba Ball-Change", "Heel Dig Bounce", "Torso Bounce", "Diagonal Slide"],
-      intermediate: ["The Pagode Step", "Samba Cross Step", "Traveling Samba", "Advanced Hip Isolations", "Samba Roll Turn", "Underarm Carnival Spins", "Continuous Double Taps", "Quick Shimmy Drops"],
-      difficult: ["High-Speed Samba Run", "The Drop-and-Recover", "Multi-Directional Shimmies", "Full-Body Vibration"]
+      beginner: ["Salsa Forward Basic", "Bachata Side Basic", "Merengue March", "Samba Step Base", "Cha Cha Side Step", "Underarm Lead", "Cross Body Guide", "Hip Swivel Rock", "Side Step-Touch", "Cuddle Position Hold", "Spot Turn", "Diagonal Salsa Glide", "Merengue Hip Shake", "Cuban Motion Rock"],
+      intermediate: ["Salsa Cross-Over Turn", "Bachata Hip Drop Pop", "Fast Traveling Merengue", "Samba Cross Step Run", "Continuous Alternating Spins", "Syncopated Cha Cha Chasse", "Open Break Tension Drop", "Shadow Position Walk"],
+      difficult: ["Advanced Salsa Pivot Line", "High Speed Samba Knee Roll", "Tandem Bachata Over-Lean", "Dramatic Theatrical Low Dip"]
     }
   },
   {
@@ -115,14 +99,6 @@ const DANCE_STYLES_DATABASE = [
     }
   },
   {
-    name: "Flamenco",
-    moves: {
-      beginner: ["Planta", "Tacón", "Golpe", "Punta", "Floreo", "Marcaje", "Braceo", "Step Side-to-Side", "Basic Turn", "Foot Drag", "Shoulder Pull", "Torso Arch", "Chest Lift", "Palmas Sordas"],
-      intermediate: ["The Zapateado Basic", "The Llamada", "Fast Continuous Braceo", "Turns with Floreo", "Advanced Palmas Rhythms", "Traveling Marking Steps", "Double Tacón Roll", "Hip Accents"],
-      difficult: ["Zapateado Counter-Rhythms", "The Desplante Drop", "Multi-Spin Turns", "Triple-Strike Footwork"]
-    }
-  },
-  {
     name: "Capoeira",
     moves: {
       beginner: ["Ginga", "Cadeira", "Meia Lua de Frente", "Cororinha", "Benção", "Armada", "Esquiva de Lado", "Negativa", "Role", "Au", "Queixada", "Passo à Frente", "Balanço", "Guarda Baixa"],
@@ -133,7 +109,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. DISPLAY LOGIC & ROUTING ENGINE
+// 2. RENDERING AUTOMATION
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -151,25 +127,36 @@ function renderDanceStyles() {
 
 function showDifficultyMenu(style) {
   const container = document.getElementById("dance-moves-container");
-container.innerHTML = <h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;background:none;border:none;" onclick="renderDanceStyles()">← Back to Styles</button>;
-["beginner", "intermediate", "difficult"].forEach(level => {
-const levelSection = document.createElement("div");
-levelSection.className = level-section ${level};
-levelSection.innerHTML = <h4 style="text-transform: capitalize; color: #bb86fc; margin-top: 20px; border-bottom: 1px solid #333; padding-bottom:5px;">${level} Level</h4>;
-style.moves[level].forEach(moveName => {
-const card = document.createElement("div");
-card.className = "move-card";
-card.innerHTML = <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong> <div class="card-actions"> <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button> </div>;
-levelSection.appendChild(card);
-});
-container.appendChild(levelSection);
-});
+  container.innerHTML = `<h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;background:none;border:none;" onclick="renderDanceStyles()">← Back to Styles</button>`;
+
+  ["beginner", "intermediate", "difficult"].forEach(level => {
+    const levelSection = document.createElement("div");
+    levelSection.className = `level-section ${level}`;
+    levelSection.innerHTML = `<h4 style="text-transform: capitalize; color: #bb86fc; margin-top: 20px; border-bottom: 1px solid #333; padding-bottom:5px;">${level} Level</h4>`;
+
+    style.moves[level].forEach(moveName => {
+      const card = document.createElement("div");
+      card.className = "move-card";
+      card.innerHTML = `
+        <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong>
+        <div class="card-actions">
+          <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button>
+        </div>
+      `;
+      levelSection.appendChild(card);
+    });
+    container.appendChild(levelSection);
+  });
 }
+
 function watchTutorial(styleName, moveName) {
-const searchQuery = encodeURIComponent(${styleName} ${moveName} dance technique tutorial);
-window.location.href = https://youtube.com{searchQuery};
+  const searchQuery = encodeURIComponent(`${styleName} ${moveName} dance technique tutorial`);
+  window.location.href = `https://youtube.com{searchQuery}`;
 }
-// EXECUTE MAP RENDER ON SCREEN SAFELY
-document.addEventListener("DOMContentLoaded", () => {
-renderDanceStyles();
-});
+
+// SAFE EXECUTION LOOP
+try {
+  renderDanceStyles();
+} catch (e) {
+  console.log("Render failed visually: ", e);
+}
