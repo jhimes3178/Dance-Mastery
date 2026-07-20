@@ -155,7 +155,15 @@ function showDifficultyMenu(style) {
 }
 
 try {
-  renderDanceStyles();
+  // Wrap execution in a DOMContentLoaded gate to prevent rendering blocks
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    renderDanceStyles();
+  } catch (e) {
+    console.error("Render execution halted safely: ", e);
+  }
+});
+
 } catch (e) {
   console.log("Render failed visually: ", e);
 }
