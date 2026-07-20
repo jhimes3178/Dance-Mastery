@@ -1,12 +1,12 @@
 // ==========================================
-// 1. TRIMMED TECHNIQUE BLUEPRINT (12 STYLES)
+// 1. CLEAN HARDCODED DATABASE (NO CALCULATED LINKS)
 // ==========================================
 const DANCE_STYLES_DATABASE = [
   {
     name: "Hip-Hop",
     moves: {
       beginner: [
-        { name: "The Bounce", videoUrl: "https://m.youtube.com/watch?v=E_zrWpFU5XE&pp=ygURaGlwaG9wIHRoZSBib3VuY2U%3D" },
+        { name: "The Bounce", videoUrl: "https://youtube.com" },
         "The Two-Step", "The Reebok", "The Smurf", "The Prep", "The Cabbage Patch", "The Running Man", "The Steve Martin", "The Bart Simpson", "The Humpty Dance", "The Wop", "The Roger Rabbit"
       ],
       intermediate: ["The Moncell", "The Biz Markie", "Basic Arm Wave", "The Butterfly", "The Sham Rock", "The Tone Whop", "The Criss-Cross", "The Bankhead Bounce"],
@@ -104,7 +104,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. DISPLAY LOGIC & RENDERING AUTOMATION
+// 2. ULTRA-FAST STATIC RENDERING LOGIC
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -139,18 +139,13 @@ function showDifficultyMenu(style) {
       const isObject = typeof move === "object" && move !== null;
       const displayName = isObject ? move.name : move;
       
-      let directUrl = "";
-      if (isObject && move.videoUrl) {
-        directUrl = move.videoUrl;
-      } else {
-        const queryText = encodeURIComponent(`${style.name} ${displayName} dance technique tutorial`);
-        directUrl = `https://youtube.com{queryText}`;
-      }
-
       card.innerHTML = `
         <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${displayName}</strong>
         <div class="card-actions">
-          <a href="${directUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background:#333; color:white; border:1px solid #444; padding:8px 12px; border-radius:4px; text-decoration: none; font-size: 14px; text-align: center; cursor:pointer;">▶ Watch Tutorial</a>
+          ${isObject && move.videoUrl 
+            ? `<a href="${move.videoUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background:#bb86fc; color:black; font-weight:bold; padding:8px 12px; border-radius:4px; text-decoration: none; font-size: 14px; text-align: center; cursor:pointer;">▶ Watch Tutorial</a>`
+            : `<span style="display: inline-block; background:#222; color:#666; border:1px dashed #333; padding:8px 12px; border-radius:4px; font-size: 14px; text-align: center; \">Coming Soon</span>`
+          }
         </div>
       `;
       levelSection.appendChild(card);
