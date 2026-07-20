@@ -1,5 +1,5 @@
 // ==========================================
-// 1. COMPACT MASTER TECHNIQUE BLUEPRINT (13 STYLES)
+// 1. COMPACT MASTER TECHNIQUE BLUEPRINT (12 STYLES)
 // ==========================================
 const DANCE_STYLES_DATABASE = [
   {
@@ -83,14 +83,6 @@ const DANCE_STYLES_DATABASE = [
     }
   },
   {
-    name: "Irish Step",
-    moves: {
-      beginner: ["The Side Step", "The Hop Back", "Point Step", "Cut Step", "Heel Click", "Bow Step", "Single Reel Step", "Light Jig Basic", "Forward Extension", "Toe Tap Front", "Heel Tap Front", "Triple Step Walk", "Skipping Step", "Circle Around"],
-      intermediate: ["The Treble", "The Click-Hop", "Treble Reel Step", "Cross-Over Jumps", "Light Jig Variations", "The Slip Jig Slide", "Heel-Toe Drops", "Traveling Back-Steps"],
-      difficult: ["The Treble Over", "Hard Shoe Treble Reels", "The Bird Leap", "Floating Heel Clicks"]
-    }
-  },
-  {
     name: "Bollywood",
     moves: {
       beginner: ["The Thumka", "Wrist Roll", "Step-Touch Diagonal", "Shoulder Shrug", "Hand Lotus Frame", "Toe-Heel Bounce", "Side Slide Arm Roll", "The Bhangra Hop", "Garba Circle Step", "Foot Tap with Clap", "Forward Lean Shimmy", "Scarf Wave", "Chest Pump Step", "Pivot Point"],
@@ -138,8 +130,8 @@ function showDifficultyMenu(style) {
       const card = document.createElement("div");
       card.className = "move-card";
       
-      const queryText = encodeURIComponent(`${style.name} ${moveName} dance technique tutorial`);
-      const nativeYoutubeUrl = `https://youtube.com{queryText}`;
+      const queryText = encodeURIComponent(style.name + " " + moveName + " dance technique tutorial");
+      const nativeYoutubeUrl = "https://youtube.com" + queryText;
 
       card.innerHTML = `
         <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong>
@@ -153,5 +145,10 @@ function showDifficultyMenu(style) {
   });
 }
 
-// Automatically trigger layout map on page render
-renderDanceStyles();
+// SAFE EXECUTION LOOP
+try {
+  renderDanceStyles();
+} catch (e) {
+  console.log("Render failed visually: ", e);
+}
+ 
