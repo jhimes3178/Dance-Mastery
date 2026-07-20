@@ -132,7 +132,6 @@ function showDifficultyMenu(style) {
       const searchTerms = style.name + " " + moveName + " dance technique tutorial";
       const queryText = encodeURIComponent(searchTerms);
       const nativeYoutubeUrl = "https://youtube.com" + queryText;
-
       card.innerHTML = `
         <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong>
         <div class="card-actions">
