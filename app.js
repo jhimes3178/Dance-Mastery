@@ -1,5 +1,5 @@
 // ==========================================
-// 1. THE LIGHTWEIGHT TECHNIQUE LIBRARY (Part 1)
+// 1. COMPACT MASTER TECHNIQUE BLUEPRINT
 // ==========================================
 const DANCE_STYLES_DATABASE = [
   {
@@ -133,7 +133,7 @@ const DANCE_STYLES_DATABASE = [
 ];
 
 // ==========================================
-// 2. DISPLAY LOGIC & SPEED ENGINE
+// 2. DISPLAY LOGIC & ROUTING ENGINE
 // ==========================================
 function renderDanceStyles() {
   const container = document.getElementById("dance-moves-container");
@@ -151,32 +151,25 @@ function renderDanceStyles() {
 
 function showDifficultyMenu(style) {
   const container = document.getElementById("dance-moves-container");
-  container.innerHTML = `<h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;background:none;border:none;" onclick="renderDanceStyles()">← Back to Styles</button>`;
-
-  ["beginner", "intermediate", "difficult"].forEach(level => {
-    const levelSection = document.createElement("div");
-    levelSection.className = `level-section ${level}`;
-    levelSection.innerHTML = `<h4 style="text-transform: capitalize; color: #bb86fc; margin-top: 20px; border-bottom: 1px solid #333; padding-bottom:5px;">${level} Level</h4>`;
-
-    style.moves[level].forEach(moveName => {
-      const card = document.createElement("div");
-      card.className = "move-card";
-      card.innerHTML = `
-        <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong>
-        <div class="card-actions">
-          <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button>
-        </div>
-      `;
-      levelSection.appendChild(card);
-    });
-    container.appendChild(levelSection);
-  });
+container.innerHTML = <h3>${style.name} Techniques</h3><button class="nav-item" style="color:#bb86fc;margin-bottom:20px;font-size:16px;cursor:pointer;background:none;border:none;" onclick="renderDanceStyles()">← Back to Styles</button>;
+["beginner", "intermediate", "difficult"].forEach(level => {
+const levelSection = document.createElement("div");
+levelSection.className = level-section ${level};
+levelSection.innerHTML = <h4 style="text-transform: capitalize; color: #bb86fc; margin-top: 20px; border-bottom: 1px solid #333; padding-bottom:5px;">${level} Level</h4>;
+style.moves[level].forEach(moveName => {
+const card = document.createElement("div");
+card.className = "move-card";
+card.innerHTML = <strong style="font-size: 16px; color: #fff; display:block; margin-bottom:10px;">${moveName}</strong> <div class="card-actions"> <button onclick="watchTutorial('${style.name}', '${moveName}')" style="background:#333;color:white;border:1px solid #444;padding:8px 12px;border-radius:4px;cursor:pointer;">▶ Watch Tutorial</button> </div>;
+levelSection.appendChild(card);
+});
+container.appendChild(levelSection);
+});
 }
-
 function watchTutorial(styleName, moveName) {
-  const searchQuery = encodeURIComponent(`${styleName} ${moveName} dance technique tutorial`);
-  window.location.href = `https://youtube.com{searchQuery}`;
+const searchQuery = encodeURIComponent(${styleName} ${moveName} dance technique tutorial);
+window.location.href = https://youtube.com{searchQuery};
 }
-
-// FORCE INSTANT VISUAL LOAD
+// EXECUTE MAP RENDER ON SCREEN SAFELY
+document.addEventListener("DOMContentLoaded", () => {
 renderDanceStyles();
+});
