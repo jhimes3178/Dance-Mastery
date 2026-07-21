@@ -144,7 +144,7 @@ function showDifficultyMenu(style) {
         <div class="card-actions">
           ${isObject && move.videoUrl 
             ? `<a href="${move.videoUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background:#bb86fc; color:black; font-weight:bold; padding:8px 12px; border-radius:4px; text-decoration: none; font-size: 14px; text-align: center; cursor:pointer;">▶ Watch Tutorial</a>`
-            : `<span style="display: inline-block; background:#222; color:#666; border:1px dashed #333; padding:8px 12px; border-radius:4px; font-size: 14px; text-align: center; \">Coming Soon</span>`
+            : `<span style="display: inline-block; background:#222; color:#666; border:1px dashed #333; padding:8px 12px; border-radius:4px; font-size: 14px; text-align: center;">Coming Soon</span>`
           }
         </div>
       `;
@@ -154,16 +154,9 @@ function showDifficultyMenu(style) {
   });
 }
 
+// DIRECT INITIATION UPON SCRIPT LOAD
 try {
-  // Wrap execution in a DOMContentLoaded gate to prevent rendering blocks
-document.addEventListener("DOMContentLoaded", () => {
-  try {
-    renderDanceStyles();
-  } catch (e) {
-    console.error("Render execution halted safely: ", e);
-  }
-});
-
+  renderDanceStyles();
 } catch (e) {
   console.log("Render failed visually: ", e);
 }
