@@ -4,23 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dance Mastery</title>
-  <!-- Global Supabase Asset SDK Link -->
+  
+  <!-- Corrected Global Supabase Asset SDK Link -->
   <script src="https://jsdelivr.net"></script>
+  
+  <!-- Global Stylesheet Link -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- 1. HEADER SECTION -->
   <header class="app-header">
     <h1>Dance Mastery App</h1>
   </header>
+
+  <!-- 2. DYNAMIC CONTENT CONTAINER -->
   <main id="dance-moves-container" class="main-content">
-    <!-- The JavaScript code will force inject categories right here -->
+    <!-- Your JavaScript code injects dance categories right here -->
   </main>
+
+  <!-- 3. NAVIGATION NAVIGATION BAR -->
   <nav class="bottom-nav">
-    <button class="nav-item active" onclick="renderDanceStyles()">🏠 Home</button>
-    <button class="nav-item" onclick="renderDanceStyles()">💃 Moves</button>
-    <button class="nav-item" onclick="alert('Sign up or log in to view bookmarks.')">❤️ Saved</button>
-    <button class="nav-item" onclick="alert('Profile configurations coming soon.')">👤 Profile</button>
+    <button class="nav-item active" onclick="renderDanceStyles()"> Home</button>
+    <button class="nav-item" onclick="renderDanceStyles()"> Moves</button>
+    <button class="nav-item" onclick="alert('Sign up or log in to view bookmarks.')"> Saved</button>
+    <button class="nav-item" onclick="alert('Profile configurations coming soon.')"> Profile</button>
   </nav>
-  <script src="app.js" defer></script>
+
+  <!-- 4. PROJECT LOGIC SCRIPT (Placed at the bottom for instant loading) -->
+  <script src="app.js"></script>
+
 </body>
 </html>
