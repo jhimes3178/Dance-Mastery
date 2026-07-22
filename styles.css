@@ -1,3 +1,8 @@
+/* Add this at the absolute top of your styles.css file */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +32,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   text-align: left;
+  cursor: pointer;
 }
 .move-card {
   background-color: #1e1e1e;
@@ -47,6 +53,7 @@ body {
 .bottom-nav {
   position: fixed;
   bottom: 0;
+  left: 0; /* FIXED: Anchors the navbar horizontally instantly */
   width: 100%;
   background-color: #1e1e1e;
   display: flex;
@@ -60,8 +67,8 @@ body {
   border: none;
   color: #888;
   font-size: 16px;
+  cursor: pointer;
 }
 .nav-item.active {
   color: #bb86fc;
 }
-
